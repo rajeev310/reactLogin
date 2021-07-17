@@ -1,0 +1,300 @@
+.container {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container.signup .card.signup {
+  top: 0;
+  right: 0;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  padding: 60px 0 40px;
+  overflow: hidden;
+  position: relative;
+}
+.container.signup .card.signup .toggle {
+  position: absolute;
+  top: 40px;
+  right: -70px;
+  box-shadow: none;
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.container.signup .card.signup .toggle:before {
+  content: "";
+}
+.container.signup .card.signup .title,
+.container.signup .card.signup .input-container,
+.container.signup .card.signup .button-container {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s ease;
+}
+.container.signup .card.signup .title {
+  transition-delay: 0.3s;
+}
+.container.signup .card.signup .input-container {
+  transition-delay: 0.4s;
+}
+.container.signup .card.signup .input-container:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.container.signup .card.signup .input-container:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.container.signup .card.signup .button-container {
+  transition-delay: 0.7s;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.3s ease;
+  width: 100%;
+}
+.card:first-child {
+  background: #eee;
+  height: 20px;
+  width: 80%;
+  border-radius: 0 0 1rem 1rem;
+  margin: 0 10px;
+  padding: 0;
+  content: "&nbsp;";
+  bottom: 30px;
+  position: absolute;
+}
+.card .signin-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2.5rem;
+}
+.card .signin-header .title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #221c70;
+  font-size: 32px;
+  font-weight: 600;
+}
+.card .signin-header .logo {
+  margin: 0;
+  text-transform: lowercase;
+  color: #4f75f7;
+  font-weight: bold;
+}
+
+.card.signup .signin-header .title,
+.card.signup .signin-header .logo {
+  color: white;
+  position: relative;
+}
+.card .input-container {
+  position: relative;
+  margin: 1rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .input-container label {
+  color: #7570a2;
+  margin-bottom: 0.25rem;
+}
+.card .input-container input {
+  outline: none;
+  z-index: 1;
+  position: relative;
+  background: none;
+  padding: 1rem 0.5rem;
+  border: 1px solid #bab8cd;
+  color: #212121;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 0.5rem;
+}
+
+.card .input-container input:focus ~ .bar:before,
+.card .input-container input:focus ~ .bar:after {
+  width: 50%;
+}
+.card .button-container {
+  margin: 1rem 2.5rem;
+  text-align: center;
+}
+.card .button-container button {
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: 0;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #221c70;
+  border: 0;
+  color: white;
+  max-height: 2.5rem;
+}
+
+.card .button-container button.logged-in {
+  background: #4f75f7;
+}
+
+.card .footer {
+  margin: 1rem 0 0;
+  color: #ccc;
+  font-size: 14px;
+  text-align: center;
+}
+
+.container.signup .card.signup .footer {
+  margin: 1rem 0 0;
+  color: #bbb;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+}
+.card .footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.card .footer a:hover {
+  color: #bababa;
+}
+.card.signup {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  background: none;
+  border-radius: 1rem;
+  box-shadow: none;
+  padding: 0;
+  transition: 0.3s ease;
+}
+.card.signup .toggle {
+  position: relative;
+  background: #4f75f7;
+  width: 120px;
+  height: 120px;
+  border-radius: 20%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #ffffff;
+  font-size: 58px;
+  line-height: 140px;
+  text-align: center;
+  cursor: pointer;
+}
+.card.signup .toggle .signup-menu-icon {
+  width: 4rem;
+  fill: white;
+}
+.card.signup .toggle:before {
+  content: "";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.card.signup .title {
+  position: relative;
+  color: #ffffff;
+}
+.card.signup .close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: inline;
+  color: #ffffff;
+  font-size: 58px;
+  font-weight: 400;
+}
+.card.signup .close:before {
+  content: "\00d7";
+}
+.card.signup .input-container input {
+  color: #ffffff;
+  border: 1px solid rgba(178, 195, 247, 1);
+  border-radius: 1rem;
+}
+
+.card.signup .input-container label {
+  color: rgba(235, 238, 253, 1);
+}
+
+.card.signup .button-container button {
+  width: 100%;
+  background: #ffffff;
+  border: 0;
+}
+.card.signup .button-container button span {
+  color: #4f75f7;
+}
+.card.signup .button-container button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.card.signup .button-container button:active:before,
+.card.signup .button-container button:focus:before {
+  display: none;
+}
+
+.input-icon {
+  position: absolute;
+  top: 2rem;
+  right: 0.5rem;
+}
+
+.input-icon.reverse {
+  fill: rgba(178, 195, 247, 1);
+  top: 2.25rem;
+}
+
+.button-container button .logged-in-icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  font-size: 0.85rem;
+  margin-top: -0.75rem;
+}
+
+/* Keyframes */
+@-webkit-keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0;
+  }
+}
+@keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0;
+  }
+}
